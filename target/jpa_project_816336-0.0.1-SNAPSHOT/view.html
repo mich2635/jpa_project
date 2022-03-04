@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js" integrity="sha512-MNW6IbpNuZZ2VH9ngFhzh6cUt8L/0rSVa60F8L22K1H72ro4Ki3M/816eSDLnhICu7vwH/+/yb8oB3BtBLhMsA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<form onsubmit="getAll()">
+<button>View all Employee</button>
+</form>
+<table>
+<thead><tr>
+<th>Emp id</th>
+<th>name</th>
+<th>Designation</th>
+<th>Salary</th>
+</tr></thead>
+<tbody id="empList"></tbody>
+</table>
+
+<a href="index.html">Home</a>
+</body>
+<script>
+function getAll(){
+	event.preventDefault();
+	alert("hi");
+	axios.get("getAllEmp").then(res => {
+		alert("2 nd step")
+		let empList=res.data;
+		alert(empList);
+		content="";
+		for(let emp of empList){
+			content += "<tr><td>" +emp.id+"</td><td>" +emp.name+ "</td><td>" +emp.designation+ "</td><td>" +emp.salary+ "</td></tr>";
+			document.querySelector("#empList").innerHTML = content;
+		}
+	})
+	
+}
+</script>
+</html>
