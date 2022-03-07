@@ -1,0 +1,61 @@
+﻿SPRING 
+	Spring is mainly used to achieve lose coupling in code
+ANNOTATIONS 
+	@SpringBootApplocatoin
+	@Controller
+	@Repository
+	@Service
+	@RestController
+	@Componenet
+	@Autowired
+IMPORTANT NOTES
+	If we use different packages in Spring,It wont recognoze 
+the coded in that packages..to do that we need to scan the packages 
+with @ComponentScan(PACKAGE NAME) Annotation
+
+	If the class is Entity class the spring wont recognize the package
+Eventhough we use spring annotation ..In order to scan the entity class we need 
+to use @EntityScan() Annotation instead of @ComponentScan annotations
+
+AOP - ASSPECT ORIENTED PROGRAMMING
+
+	In this concept the AOP Annotated methods will be called before or after 
+The actual method call happens ..We can also call this methods after the exception 
+throws
+
+SPRING BOOT 
+	Spring boot was discovered to replace the servlet to reduce the codes
+Using Spring boot we can create MVC Application and REST application,
+Using REST API we can easily create code independent front end and back end codes
+
+	IMPORTANT ANNOTATION
+		@Controller
+		@RestController
+		@GetMapping
+		@PostMapping
+		@DeleteMapping
+		@PatchMapping
+@GetMapping is used when Selection operation is gonna held
+@PostMapping is used when insert operation is gonna held
+@PatchMapping is used when update operation is gonna held
+@DeleteMapping is used when Delete operation is gonna held
+
+JPA - Java Persistent API
+
+	Developers biggest difficulties is to write query bases programms and 
+to match the datatype of the data in the program with the datatype in database.
+To simplify this JPA is used 
+	By using JPA The table is automatically created based on the annotations
+which makes the developing life easoer
+	The more important thing is JPA automaticallu opens and closes the connection
+to the database 
+	ANNOTATION USED
+		@Entity
+		@Id
+		@GeneratedValue
+		@Table
+		@Column
+		@InheritanceType
+		@OneToOne
+		@OneToMany
+		@ManyToMany
